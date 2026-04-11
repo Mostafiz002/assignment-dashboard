@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Syne, Geist_Mono } from "next/font/google"; // Import Syne here
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Configure Syne
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // Matches your link weights
 });
 
 const geistMono = Geist_Mono({
@@ -26,9 +28,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full`}
+      // Add syne.variable here
+      className={`${syne.variable} ${geistMono.variable} h-full`}
     >
-      <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+      <body className="min-h-screen bg-gray-50 text-gray-900 antialiased font-sans">
         {children}
         <Toaster />
       </body>
