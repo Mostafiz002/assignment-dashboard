@@ -5,6 +5,7 @@ import Sidebar from "@/components/layout/Sidebar";
 import MainContent from "@/components/dashboard/MainContent";
 import RightPanel from "@/components/dashboard/RightPanel";
 import Topbar from "@/components/layout/Topbar";
+import ContactList from "@/components/dashboard/ContactList";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("contacts"); 
@@ -18,7 +19,7 @@ export default function Dashboard() {
       <div className="flex flex-1 gap-4 overflow-hidden">
         {/* Left Sidebar */}
         <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-
+        <ContactList/>
         {/* Center */}
         <div className="flex-1 overflow-y-auto no-scrollbar rounded-3xl">
           <MainContent />
