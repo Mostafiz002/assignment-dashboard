@@ -5,11 +5,11 @@ import Logo from "@/components/ui/logo";
 
 export default function Topbar() {
   return (
-    <header className="flex w-full items-center justify-between px-6 pt-1 pb-4">
+    <header className="flex w-full items-center justify-between px-0 pt-1 pb-4">
       {/* Left */}
-      <Logo />
+      <Logo className="pl-2.5" />
       {/* Middle */}
-      <div className="flex w-full max-w-2xl items-center gap-2 rounded-[20px] bg-white/40 p-1.5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] border border-white/20">
+      <div className="flex w-full max-w-2xl items-center gap-2 rounded-[20px] bg-white/40 p-1.25 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] border border-white/20">
         <div className="flex h-10 w-14 items-center justify-center rounded-[14px] bg-[#f2f4f1] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] transition-transform active:translate-y-0.5">
           <Search className="h-4 w-4 text-slate-500" />
         </div>
@@ -29,7 +29,7 @@ export default function Topbar() {
       </div>
 
       {/* Right */}
-      <div className="flex items-center gap-2 rounded-[20px] bg-white/40 p-1.5 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] border border-white/20">
+      <div className="flex items-center gap-2 rounded-[20px] bg-white/40 p-1.25 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.07)] border border-white/20">
         <div className="flex items-center gap-3 ">
           <Avatar className="h-10 w-13 rounded-[14px] overflow-hidden  ">
             <AvatarImage

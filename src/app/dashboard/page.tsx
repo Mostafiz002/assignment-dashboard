@@ -1,8 +1,7 @@
-"use client"; // Required for state
+"use client"; 
 
 import { useState } from "react";
 import Sidebar from "@/components/layout/Sidebar";
-import ContactList from "@/components/dashboard/ContactList";
 import MainContent from "@/components/dashboard/MainContent";
 import RightPanel from "@/components/dashboard/RightPanel";
 import Topbar from "@/components/layout/Topbar";
@@ -11,8 +10,8 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("contacts"); 
 
   return (
-    <main className="flex flex-col h-screen w-full gap-4 bg-[#F2F4F1] p-4 text-slate-800 overflow-hidden">
-      {/* Topbar: Spans full width */}
+    <main className="flex flex-col w-full gap-4 bg-[#F2F4F1] p-4 text-slate-800 ">
+      {/* Topbar */}
       <div className="w-full">
         <Topbar />
       </div>
