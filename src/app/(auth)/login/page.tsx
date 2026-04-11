@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
+import { toast } from "sonner";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -25,8 +26,9 @@ export default function LoginPage() {
     setLoading(false);
 
     if (error) {
-      alert(error.message);
+      toast.error(error.message);
     } else {
+      toast.success("Welcome back!");
       router.push("/dashboard");
     }
   };
@@ -39,7 +41,12 @@ export default function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input name="email" placeholder="Email" required />
-            <Input name="password" type="password" placeholder="Password" required />
+            <Input
+              name="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
 
             <Button className="w-full" disabled={loading}>
               {loading ? "Logging in..." : "Login"}
