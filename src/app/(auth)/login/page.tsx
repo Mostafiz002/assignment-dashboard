@@ -1,4 +1,3 @@
-// app/(auth)/login/page.tsx
 "use client";
 
 import { signIn } from "@/lib/auth";
@@ -9,17 +8,20 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
+import Link from "next/link";
 
 export default function LoginPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    const form = e.currentTarget;
+
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const password = (form.elements.namedItem("password") as HTMLInputElement).value;
 
     const { error } = await signIn(email, password);
 
@@ -41,17 +43,20 @@ export default function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input name="email" placeholder="Email" required />
-            <Input
-              name="password"
-              type="password"
-              placeholder="Password"
-              required
-            />
+            <Input name="password" type="password" placeholder="Password" required />
 
             <Button className="w-full" disabled={loading}>
               {loading ? "Logging in..." : "Login"}
             </Button>
           </form>
+
+          {/* 🔥 toggle link */}
+          <p className="text-sm text-center mt-4 text-gray-600">
+            Don’t have an account?{" "}
+            <Link href="/signup" className="text-blue-600 hover:underline">
+              Sign up
+            </Link>
+          </p>
         </CardContent>
       </Card>
     </div>
