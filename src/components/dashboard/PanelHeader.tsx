@@ -1,4 +1,4 @@
-import { Plus, ArrowUpRight } from "lucide-react";
+import { Plus, ArrowUpRight, MessageCircle } from "lucide-react";
 
 interface PanelHeaderProps {
   title: string;
@@ -17,7 +17,7 @@ export default function PanelHeader({ title, count, icon, showActions }: PanelHe
             count
           ) : (
             <div className="p-1">
-              <div className="w-4 h-4 border-2 border-slate-400 rounded-full border-t-transparent" />
+             <MessageCircle size={18} />
             </div>
           )}
         </div>
