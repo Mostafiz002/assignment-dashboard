@@ -33,7 +33,7 @@ export default function Topbar() {
         <div className="flex items-center gap-3 ">
           <Avatar className="h-10 w-13 rounded-[14px] overflow-hidden  ">
             <AvatarImage
-              src="/avatar-emily.png"
+              src="https://i.pravatar.cc/150?u=george"
               className="object-cover rounded-[14px]"
             />
             <AvatarFallback className="bg-[#F9E066] text-xs font-bold rounded-[14px]">

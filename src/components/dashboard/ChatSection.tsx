@@ -28,7 +28,7 @@ export default function ChatSection() {
           <div className="self-start max-w-[90%] flex gap-2 items-start">
             <div className="w-8 h-8 rounded-full bg-slate-200 border-2 border-white shadow-sm shrink-0 mt-1 overflow-hidden">
               <img
-                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
+                src="https://i.pravatar.cc/150?u=gregory"
                 alt="avatar"
                 className="w-full h-full object-cover"
               />
@@ -61,7 +61,6 @@ export default function ChatSection() {
                 <div className="w-24 h-32 bg-slate-100 rounded-[18px] border-4 border-[#f5f5f0] shadow-sm overflow-hidden" />
                 <div className="relative w-24 h-32 bg-slate-100 rounded-[18px] border-4 border-[#f5f5f0] shadow-sm ">
                   <div className="w-full h-full bg-slate-200/50" />
-                  {/* Heart Icon on the LEFT for bottom message */}
                   <div className="absolute -left-33  top-1/2 -translate-y-1/2 bg-[#e2e2d8] rounded-full p-1 shadow-sm ">
                     <Heart size={10} className="fill-red-400 text-red-400" />
                   </div>
@@ -78,7 +77,7 @@ export default function ChatSection() {
 
             <div className="w-8 h-8 rounded-full bg-slate-200 border-2 border-white shadow-sm shrink-0 mt-1 overflow-hidden">
               <img
-                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka"
+                src="https://i.pravatar.cc/150?u=george"
                 alt="user-avatar"
                 className="w-full h-full object-cover"
               />
