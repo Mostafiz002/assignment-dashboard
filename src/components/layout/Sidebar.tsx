@@ -40,7 +40,7 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
       {/* Top */}
       <div className="flex flex-col items-center">
         {/* Collapse Button */}
-        <button className="mb-3 bg-[#f9f9f9] text-slate-400 hover:bg-[#efefe9]  hover:text-slate-600 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] flex h-11 w-11 items-center justify-center rounded-[14px] transition-all duration-100 active:translate-y-px cursor-pointer">
+        <button className="mb-3 bg-[#f9f9f9] text-slate-500 hover:bg-[#efefe9]  hover:text-slate-600 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] flex h-11 w-11 items-center justify-center rounded-[14px] transition-all duration-100 active:translate-y-px cursor-pointer">
           <ChevronLeft size={18} />
         </button>
 
@@ -54,7 +54,7 @@ export default function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
                   "flex h-11 w-11 items-center justify-center rounded-[14px] transition-all duration-200 active:translate-y-px cursor-pointer",
                   activeTab === item.id
                     ? "bg-slate-800 text-white shadow-lg scale-105"
-                    : "bg-[#f9f9f9]  text-slate-400 hover:bg-[#efefe9]  hover:text-slate-600 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] ",
+                    : "bg-[#f9f9f9]  text-slate-500 hover:bg-[#efefe9]  hover:text-slate-600 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] ",
                 )}
               >
                 <item.icon

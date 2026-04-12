@@ -24,7 +24,7 @@ export default function Topbar() {
           className="flex h-10 w-14 items-center justify-center rounded-[14px] bg-[#f5f5f0] cursor-pointer 
   shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] hover:bg-[#efefe9] transition-transform active:translate-y-0.5"
         >
-          <ChevronDown className="h-4 w-4 text-slate-400" />
+          <ChevronDown className="h-4 w-4 text-slate-500" />
         </button>
       </div>
 
@@ -54,7 +54,7 @@ export default function Topbar() {
           className="flex h-10 w-13 items-center justify-center rounded-[14px] bg-[#f5f5f0] cursor-pointer 
   shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] hover:bg-[#efefe9] transition-transform active:translate-y-0.5"
         >
-          <Settings2 className="h-4 w-4 text-slate-400" />
+          <Settings2 className="h-4 w-4 text-slate-500" />
         </button>
       </div>
     </header>

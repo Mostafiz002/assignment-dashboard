@@ -22,7 +22,7 @@ export default function ContactList() {
         </h1>
       </div>
 
-      <ScrollArea className="flex-1 bg-[#f0f0eb] p-2 rounded-[18]">
+      <ScrollArea className="flex-1 shadow-[inset_0_2px_10px_rgba(0,0,0,0.05)] bg-[#f0f0eb] p-2 rounded-[18]">
         <div className="flex flex-col gap-4 ">
           {/* Section: New Contact */}
           <section>

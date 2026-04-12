@@ -1,4 +1,3 @@
-import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
 
 interface TaskItemProps {
@@ -9,22 +8,22 @@ interface TaskItemProps {
 
 export default function TaskItem({ text, time, checked }: TaskItemProps) {
   return (
-    <div className="flex items-start gap-3 py-1">
-      <Checkbox 
-        checked={checked} 
-        className="mt-1 border-slate-300 data-[state=checked]:bg-[#F9E066] data-[state=checked]:border-[#F9E066] data-[state=checked]:text-black" 
-      />
-      <div className="flex flex-col gap-0.5">
+    <div className="flex items-start justify-between gap-3 group cursor-pointer py-1">
+      <div className="flex items-start gap-3">
+        <div className={cn(
+          "mt-0.5 h-5 w-5 rounded-[6px] flex items-center justify-center border-2 transition-colors",
+          checked ? "bg-[#F9E066] border-[#F9E066]" : "bg-[#f5f5f0] border-transparent"
+        )}>
+          {checked && <div className="w-2.5 h-1.5 border-b-2 border-l-2 border-slate-900 -rotate-45 mb-0.5" />}
+        </div>
         <p className={cn(
-          "text-sm font-medium leading-none transition-colors",
-          checked ? "text-slate-400 line-through" : "text-slate-700"
+          "text-[11px] font-bold leading-relaxed max-w-40",
+          checked ? "text-slate-400" : "text-slate-700"
         )}>
           {text}
         </p>
-        <span className="text-[10px] text-slate-400 font-normal uppercase tracking-wider">
-          {time}
-        </span>
       </div>
+      <span className="text-[9px] font-bold text-slate-300 mt-0.5 uppercase">{time}</span>
     </div>
   );
 }

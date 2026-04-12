@@ -18,7 +18,7 @@ export function SectionHeader({
       <div className="flex items-center gap-3">
         <div
           className="flex h-10 w-12 items-center justify-center rounded-[14px] bg-[#f5f5f0] cursor-pointer 
-          shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] hover:bg-[#efefe9] transition-transform"
+          shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] hover:bg-[#efefe9] transition-transform font-semibold text-[14px] text-slate-600"
         >
           {count}
         </div>
@@ -27,7 +27,7 @@ export function SectionHeader({
       <button
         onClick={onToggle}
         className="flex h-10 w-12 items-center justify-center rounded-[14px] bg-[#f5f5f0] cursor-pointer 
-        shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] hover:bg-[#efefe9] transition-transform"
+        shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] hover:bg-[#efefe9] transition-transform text-slate-500"
       >
         {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
       </button>
