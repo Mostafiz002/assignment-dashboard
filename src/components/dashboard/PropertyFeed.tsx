@@ -21,11 +21,12 @@ export default function PropertyFeed() {
             <input 
               type="text" 
               placeholder="Search..." 
-              className="w-full bg-white/50 border border-white/60 rounded-2xl py-3 pl-12 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-slate-200 transition-all"
+              className="w-full bg-white/50 border border-white/60 rounded-[14px] py-2.5 pl-12 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-slate-200 transition-all"
             />
           </div>
           {/* Filter Button */}
-          <button className="h-11 w-11 flex items-center justify-center bg-white/50 border border-white/60 rounded-2xl text-slate-500 hover:bg-white transition-all shadow-sm">
+          <button className="flex h-10 w-13 items-center justify-center rounded-[14px] bg-[#f5f5f0] cursor-pointer 
+  shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] hover:bg-[#efefe9] transition-transform active:translate-y-0.5  text-slate-500">
             <Filter size={18} />
           </button>
         </div>
@@ -41,8 +42,8 @@ export default function PropertyFeed() {
       {/* Property List */}
       <div className="grid grid-cols-1 gap-6">
         {properties.map(p => (
-          <div key={p.id} className="group bg-white/40 rounded-[40px] p-4 border border-white/50 flex gap-8 items-center hover:bg-white transition-all cursor-pointer">
-            <div className="h-48 w-80 rounded-[32px] overflow-hidden shadow-sm">
+          <div key={p.id} className="group bg-white/40 rounded-[14px] p-2 border border-white/50 flex gap-8 items-center hover:bg-white transition-all cursor-pointer">
+            <div className="h-48 w-80 rounded-[12px] overflow-hidden shadow-sm">
               <img src={p.image} alt={p.address} className="w-full h-full object-cover transition-transform group-hover:scale-105" />
             </div>
             <div className="flex-1">
@@ -58,7 +59,8 @@ export default function PropertyFeed() {
 
 function UtilityButton({ icon }: { icon: React.ReactNode }) {
   return (
-    <button className="h-11 w-11 flex items-center justify-center bg-white/50 border border-white/60 rounded-2xl text-slate-500 hover:bg-white transition-all shadow-sm">
+    <button className="flex h-10 w-13 items-center justify-center rounded-[14px] bg-[#f5f5f0] cursor-pointer 
+  shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.1)] hover:bg-[#efefe9] transition-transform active:translate-y-0.5  text-slate-500">
       {icon}
     </button>
   );

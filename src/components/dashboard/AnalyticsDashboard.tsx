@@ -6,10 +6,10 @@ export default function AnalyticsDashboard() {
     <section className="mt-0">
       <TabsContent value="analytics" className="mt-0 border-none p-0 outline-none">
 
-        {/* ── ROW 1: Score + Pattern blocks ── */}
-        <div className="mt-5 flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-6">
+        {/* ── ROW 1  ── */}
+        <div className="mt-5 mb-5 flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-6">
 
-          {/* Average Score — inline, no card box */}
+          {/* Average Score */}
           <div className="shrink-0">
             <div className="flex items-center gap-2">
               <p className="text-[12px] font-semibold text-slate-400">Average score</p>
@@ -111,7 +111,7 @@ function StatCard({
   badgeUp?: boolean;
 }) {
   return (
-    <div className="relative bg-white/45 rounded-[28px] sm:rounded-[32px] p-5 sm:p-6 border border-white/60 shadow-sm overflow-hidden flex flex-col h-50 sm:h-57.5">
+    <div className="relative p-2 sm:p-6  overflow-hidden flex flex-col h-50 sm:h-57.5">
 
       {/* Dense dot texture fills whole card */}
       <div
@@ -131,11 +131,8 @@ function StatCard({
         {value}
       </h4>
 
-      {/* Bottom bar row */}
       <div className="relative mt-auto flex items-center gap-2">
-        {/* Colored bar */}
         <div className={`h-10 sm:h-11 flex-1 rounded-[12px] ${barColor} relative overflow-hidden`}>
-          {/* subtle dot texture on bar */}
           <div
             className="absolute inset-0"
             style={{

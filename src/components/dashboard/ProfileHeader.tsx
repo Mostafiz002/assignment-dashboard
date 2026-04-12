@@ -41,7 +41,7 @@ export default function ProfileHeader() {
         </div>
 
         {/* Right: Info + Tabs */}
-        <div className="flex-1 flex flex-col min-h-[192px] sm:min-h-[224px] lg:min-h-[256px] pt-1">
+        <div className="flex-1 flex flex-col min-h-48 sm:min-h-56 lg:min-h-64 pt-1">
           <div className="flex items-center justify-between">
             <h2 className="text-[22px] sm:text-[26px] font-bold text-slate-800 tracking-tight">
               Gregory Clark
