@@ -13,7 +13,7 @@ export default function AnalyticsDashboard() {
           <div className="shrink-0">
             <div className="flex items-center gap-2">
               <p className="text-[12px] font-semibold text-slate-400">Average score</p>
-              <span className="bg-[#b4f481] text-slate-800 text-[9px] font-black px-2 py-[3px] rounded-full leading-none">
+              <span className="bg-[#b4f481] text-slate-800 text-[9px] font-black px-2 py-0.75 rounded-full leading-none">
                 +138 pts
               </span>
             </div>
@@ -27,15 +27,11 @@ export default function AnalyticsDashboard() {
             </div>
           </div>
 
-          {/* 4 Pattern Blocks — equal width columns */}
+          {/* 4 Pattern Blocks */}
           <div className="flex-1 grid grid-cols-4 gap-2.5 sm:gap-3 items-end pb-1">
-            {/* 1. Solid yellow */}
             <PatternBlock value={138} bgClass="bg-[#FDE047]" />
-            {/* 2. Dotted grey */}
             <PatternBlock value={20} bgClass="bg-slate-200" dotted />
-            {/* 3. Diagonal stripe — wider appearance via taller height */}
             <PatternBlock value={123} bgClass="bg-slate-200" diagonal tall />
-            {/* 4. Plain light */}
             <PatternBlock value={123} bgClass="bg-slate-100" tall />
           </div>
         </div>
@@ -72,7 +68,7 @@ function PatternBlock({
       <div
         className={`
           w-full rounded-[16px] ${bgClass} relative overflow-hidden
-          ${tall ? "h-[58px] sm:h-[66px]" : "h-[52px] sm:h-[60px]"}
+          ${tall ? "h-14.5 sm:h-16.5" : "h-13 sm:h-15"}
         `}
       >
         {dotted && (
@@ -115,7 +111,7 @@ function StatCard({
   badgeUp?: boolean;
 }) {
   return (
-    <div className="relative bg-white/45 rounded-[28px] sm:rounded-[32px] p-5 sm:p-6 border border-white/60 shadow-sm overflow-hidden flex flex-col h-[200px] sm:h-[230px]">
+    <div className="relative bg-white/45 rounded-[28px] sm:rounded-[32px] p-5 sm:p-6 border border-white/60 shadow-sm overflow-hidden flex flex-col h-50 sm:h-57.5">
 
       {/* Dense dot texture fills whole card */}
       <div
@@ -153,7 +149,7 @@ function StatCard({
         {badge ? (
           <div className="h-10 sm:h-11 w-14 sm:w-16 shrink-0 rounded-[12px] bg-white/80 border border-white shadow-sm flex items-center justify-center gap-0.5">
             <span className="text-[11px] font-black text-slate-700">{badge}</span>
-            {badgeUp && <ChevronUp size={10} className="text-[#5daa28] stroke-[3]" />}
+            {badgeUp && <ChevronUp size={10} className="text-[#5daa28] stroke-3" />}
           </div>
         ) : (
           <div className="h-10 sm:h-11 w-14 sm:w-16 shrink-0 rounded-[12px] bg-white/40 border border-white/30" />
